@@ -1,0 +1,15 @@
+package phanngonhatlam;
+public class bt1 {
+
+    public static void main(String[] args) {
+        // Các câu lệnh xử lý
+        int arr[]={2,5,7,10,19,27};//Khai báo mảng 1 chiều kiểu arr kiểu int
+        int cs = 0;//Biểu lưu chỉ số mảng
+        System.out.printf("Phần tử thứ 1: arr[%d] = %d",cs,arr[cs]);
+        System.out.printf("\nPhần tử thứ 2: arr[%d] = %d",cs=cs+1,arr[cs]);
+        System.out.printf("\nPhần tử thứ 3: arr[%d] = %d",cs=cs+1,arr[cs]);
+        System.out.printf("\nPhần tử thứ 4: arr[%d] = %d",cs=cs+1,arr[cs]);
+        System.out.printf("\nPhần tử thứ 5: arr[%d] = %d",cs=cs+1,arr[cs]);
+        System.out.printf("\nPhần tử thứ 6: arr[%d] = %d",cs=cs+1,arr[cs]);
+    }
+}
