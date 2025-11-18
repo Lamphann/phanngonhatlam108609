@@ -1,0 +1,327 @@
+:root{
+  --yellow:#ffd54f;
+  --dark:#2f3240;
+  --muted:#9aa0ab;
+  --light-bg:#f6f7fb;
+  --card-bg:#ffffff;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+}
+/* HEADER */
+.site-header .brand{
+  font-weight:700;
+  font-size:1.15rem;
+  color:var(--dark);
+  text-decoration:none;
+}
+.brand-yellow{color:var(--yellow)}
+.brand-dark{color:var(--dark)}
+.icon-sm{width:18px;height:18px}
+.btn-white-circle{
+  background:#fff;border:1px solid #eee;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+}
+
+/* HERO SECTION */
+.hero-section {
+  background-color:white;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #2f2f3f;
+}
+
+.hero-section .info-item {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hero image */
+.hero-image-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white; /* trùng màu với hero-section */
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  background-color: white;
+}
+
+/* RESTAURANTS */
+.restaurants .card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurants .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.restaurants .card-img-top {
+  width: 100%;
+  height: 200px; /* có thể chỉnh 180–220px tùy ảnh */
+  object-fit: cover; /* giúp ảnh không méo, luôn lấp đầy khung */
+}
+
+.restaurants .card-body {
+  padding: 1rem;
+}
+
+/* NEAREST RESTAURANTS */
+.nearest {
+  background-color: gray;
+}
+
+.nearest input {
+  max-width: 400px;
+}
+
+/* SPECIALITIES */
+.spec-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem 2.75rem;
+  font-weight: 500;
+  color: #555;
+  transition: 0.3s;
+}
+
+.spec-item:hover {
+  background: #ffeb99;
+  color: #000;
+}
+
+/* STATS */
+.stats .circle {
+  display: inline-block;
+  background: #ffd54f;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+/* STATS BACKGROUND JUST FOR NUMBERS */
+.stats-numbers {
+  background-image: url("images/bg-stats.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 3rem 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.stats-numbers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+}
+
+.stats-numbers div {
+  position: relative;
+  z-index: 3;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* SPECIALITIES */
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: #555;
+  transition: 0.3s;
+  min-width: 100px; /* giữ kích thước tối thiểu */
+}
+
+.spec-item img {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.spec-item:hover {
+  background: #ffeb99;
+  color: #000;
+}
+
+/* FOOTER */
+footer h6 {
+  font-weight: 600;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+
+/*DELIVERY INFO BAR: POSITION ADJUSTED TO OVERLAP HERO*/
+.delivery-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;          
+  padding: 0;
+  position: relative;      
+  z-index: 60;            
+  pointer-events: none;
+}
+
+.delivery-info .container {
+  pointer-events: auto;
+}
+
+.delivery-inner {
+  background: #fff;
+  box-shadow: 0 18px 36px rgba(31,35,48,0.12);
+  border-radius: 12px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+
+  transform: translateY(62%);
+}
+
+.delivery-inner .info-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 33%;
+  min-width: 170px;
+}
+
+.delivery-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
+.delivery-inner p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.2;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767.98px) {
+  .delivery-inner {
+    transform: translateY(0);
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .delivery-inner .info-block {
+    justify-content: center;
+    min-width: auto;
+  }
+
+  .delivery-info {
+    margin-top: 0;
+    padding-bottom: 12px;
+    z-index: 50;
+  }
+}
+
+.hero-section {
+  margin-bottom: 80px;
+}
+
+/* Hero image subtle float animation */
+.hero-image {
+  animation: floatTilt 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes floatTilt {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(1.2deg); }
+  50% { transform: translateY(-10px) rotate(0deg); }
+  75% { transform: translateY(-6px) rotate(-1.2deg); }
+}
+.instagram-img {
+  transition: all 0.6s ease;
+}
+
+.instagram-img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.menu-item {
+  background: #fff;
+  border-radius: 14px;
+  min-width: 200px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+.menu-item:hover {
+  transform: translateY(-4px);
+}
+.menu-item img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.menu-item-title {
+  font-weight: 600;
+  margin-top: 8px;
+}
+.menu-item-price {
+  color: #ff9800;
+  font-weight: 600;
+}
+.menu-item button {
+  margin-top: 10px;
+}
+.specialities-list {
+  align-items: stretch !important;
+  padding-bottom: 12px;
+}
+
+.specialities .container {
+  position: relative;
+}
+
+.specialities h2 {
+  margin-left: 6px;
+}
+
